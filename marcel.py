@@ -11,13 +11,14 @@ import subprocess
 import sys
 
 TRANSLATIONS = {
+    # Commands
     u'marcel': u'docker',
     u'chauffe': u'run',
     u'pousse': u'push',
     u'tire': u'pull',
-    u'bûches': u'logs'
-    u'greve': u'suspend'
-    u'matuer': u'kill'
+    u'bûches': u'logs',
+    u'greve': u'suspend',
+    u'matuer': u'kill',
     u'perquisitionne': u'inspect',
     u'construis': 'build',
     u'charge': 'load',
@@ -26,6 +27,16 @@ TRANSLATIONS = {
     u'france24': 'info',
     u'insee': 'stats',
     u'rtt': 'pause'
+    u'sur-ecoute': u'attach',
+    u'cederoms': u'images'
+    u'vos-papiers': 'login',
+    u'déchéance': 'logout',
+    u'sauvegarde': 'save',
+    # Options
+    u'--aide': '--help',
+    u'--marque': '--tag',
+    u'--sortie': '--output',
+    u'--auteur': '--author'
 }
 
 
