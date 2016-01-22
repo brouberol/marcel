@@ -18,6 +18,13 @@ TRANSLATIONS = {
     u'bûches': u'logs'
     u'greve': u'suspend'
     u'matuer': u'kill'
+    u'perquisitionne': u'inspect',
+    u'construis': 'build',
+    u'charge': 'load',
+    u'plagie': 'copy',
+    u'tableaux': 'images',
+    u'tf1': 'info',
+    u'insee': 'stats'
 }
 
 
