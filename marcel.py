@@ -26,7 +26,7 @@ TRANSLATIONS = {
     u'tf1': 'info',
     u'insee': 'stats',
     u'sur-ecoute': u'attach',
-    u'images': u'cederoms'
+    u'cederoms': u'images',
 }
 
 
