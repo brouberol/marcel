@@ -22,11 +22,10 @@ TRANSLATIONS = {
     u'construis': 'build',
     u'charge': 'load',
     u'plagie': 'copy',
-    u'tableaux': 'images',
     u'tf1': 'info',
     u'insee': 'stats',
     u'sur-ecoute': u'attach',
-    u'images': u'cederoms'
+    u'cederoms': u'images'
     u'vos-papiers': 'login',
     u'déchéance': 'logout'
 }
