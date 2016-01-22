@@ -6,13 +6,13 @@ Marcel is a french wrapper around the docker CLI, intended as a drop-in
 replacement of docker, for the future french sovereign operating system.
 """
 
-import re
 import subprocess
 import sys
 
+__version__ = '0.1.0'
+
 TRANSLATIONS = {
     # Commands
-    u'marcel': u'docker',
     u'chauffe': u'run',
     u'pousse': u'push',
     u'tire': u'pull',
@@ -41,15 +41,9 @@ TRANSLATIONS = {
 }
 
 
-def clean_executable(command_chunks):
-    """Remove the ".py" suffix from the executable name, if found."""
-    command_chunks[0] = re.sub(r'\.py$', '', command_chunks[0])
-    return command_chunks
-
-
 def main():
     command = sys.argv[:]
-    command = clean_executable(command)
+    command[0] = 'docker'
     command = [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
     subprocess.call(command)
 
