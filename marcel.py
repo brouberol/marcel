@@ -12,10 +12,12 @@ import sys
 
 TRANSLATIONS = {
     u'marcel': u'docker',
-    u'roule': u'run',
+    u'chauffe': u'run',
     u'pousse': u'push',
     u'tire': u'pull',
     u'bûches': u'logs'
+    u'greve': u'suspend'
+    u'matuer': u'kill'
 }
 
 
