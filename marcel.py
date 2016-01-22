@@ -23,8 +23,9 @@ TRANSLATIONS = {
     u'charge': 'load',
     u'plagie': 'copy',
     u'tableaux': 'images',
-    u'tf1': 'info',
-    u'insee': 'stats'
+    u'france24': 'info',
+    u'insee': 'stats',
+    u'rtt': 'pause'
 }
 
 
