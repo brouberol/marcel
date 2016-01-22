@@ -26,9 +26,9 @@ TRANSLATIONS = {
     u'tableaux': 'images',
     u'france24': 'info',
     u'insee': 'stats',
-    u'rtt': 'pause'
+    u'rtt': 'pause',
     u'sur-ecoute': u'attach',
-    u'cederoms': u'images'
+    u'cederoms': u'images',
     u'vos-papiers': 'login',
     u'déchéance': 'logout',
     u'sauvegarde': 'save',
@@ -36,7 +36,7 @@ TRANSLATIONS = {
     u'--aide': '--help',
     u'--marque': '--tag',
     u'--sortie': '--output',
-    u'--auteur': '--author'
+    u'--auteur': '--author',
 }
 
 
