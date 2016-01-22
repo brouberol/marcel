@@ -12,3 +12,5 @@ Marcel is a french wrapper around the docker CLI, intended as a drop-in replacem
 * ``docker logs`` → ``marcel bûches``
 * ``docker pause`` → ``marcel rtt``
 * ``docker suspend`` → ``marcel grève``
+* ``docker tag`` → ``marcel graffiti``
+* ``docker rmi`` → ``marcel rsa``

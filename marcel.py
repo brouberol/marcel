@@ -31,6 +31,8 @@ TRANSLATIONS = {
     u'vos-papiers': 'login',
     u'déchéance': 'logout',
     u'sauvegarde': 'save',
+    u'tag': u'graffiti',
+    u'rsa': u'rmi',
     # Options
     u'--aide': '--help',
     u'--marque': '--tag',
