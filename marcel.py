@@ -15,16 +15,18 @@ TRANSLATIONS = {
     u'chauffe': u'run',
     u'pousse': u'push',
     u'tire': u'pull',
-    u'bûches': u'logs'
-    u'greve': u'suspend'
-    u'matuer': u'kill'
+    u'bûches': u'logs',
+    u'greve': u'suspend',
+    u'matuer': u'kill',
     u'perquisitionne': u'inspect',
     u'construis': 'build',
     u'charge': 'load',
     u'plagie': 'copy',
     u'tableaux': 'images',
     u'tf1': 'info',
-    u'insee': 'stats'
+    u'insee': 'stats',
+    u'sur-ecoute': u'attach',
+    u'images': u'cederoms'
 }
 
 
