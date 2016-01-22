@@ -26,7 +26,9 @@ TRANSLATIONS = {
     u'tf1': 'info',
     u'insee': 'stats',
     u'sur-ecoute': u'attach',
-    u'cederoms': u'images',
+    u'images': u'cederoms'
+    u'vos-papiers': 'login',
+    u'déchéance': 'logout'
 }
 
 
