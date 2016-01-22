@@ -17,6 +17,7 @@ TRANSLATIONS = {
     u'tire': u'pull',
     u'bûches': u'logs'
     u'greve': u'suspend'
+    u'vos-papiers': u'inspect'
 }
 
 
