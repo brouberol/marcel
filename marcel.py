@@ -37,6 +37,7 @@ TRANSLATIONS = {
     u'--marque': '--tag',
     u'--sortie': '--output',
     u'--auteur': '--author',
+    u'--49-3:': u'--force'
 }
 
 
