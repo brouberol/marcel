@@ -23,7 +23,6 @@ TRANSLATIONS = {
     u'construis': 'build',
     u'charge': 'load',
     u'plagie': 'copy',
-    u'tableaux': 'images',
     u'france24': 'info',
     u'insee': 'stats',
     u'rtt': 'pause',
