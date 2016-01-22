@@ -7,7 +7,7 @@ Marcel is a french wrapper around the docker CLI, intended as a drop-in replacem
 ## Examples
 
 * ``docker run`` → ``marcel chauffe``
-* ``docker images`` → ``marcel images``
+* ``docker images`` → ``marcel cederoms``
 * ``docker login`` → ``marcel vos-papiers``
 * ``docker logs`` → ``marcel bûches``
 * ``docker pause`` → ``marcel rtt``
