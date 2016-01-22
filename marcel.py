@@ -15,7 +15,7 @@ TRANSLATIONS = {
     # Commands
     u'chauffe': u'run',
     u'pousse': u'push',
-    u'tire': u'pull',
+    u'apporte': u'pull',
     u'bûches': u'logs',
     u'grève': u'suspend',
     u'matuer': u'kill',
