@@ -11,6 +11,7 @@ import subprocess
 import sys
 
 TRANSLATIONS = {
+    # Commands
     u'marcel': u'docker',
     u'chauffe': u'run',
     u'pousse': u'push',
@@ -27,7 +28,13 @@ TRANSLATIONS = {
     u'sur-ecoute': u'attach',
     u'cederoms': u'images'
     u'vos-papiers': 'login',
-    u'déchéance': 'logout'
+    u'déchéance': 'logout',
+    u'sauvegarde': 'save',
+    # Options
+    u'--aide': '--help',
+    u'--marque': '--tag',
+    u'--sortie': '--output',
+    u'--auteur': '--author'
 }
 
 
