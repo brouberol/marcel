@@ -3,7 +3,7 @@
 
 """
 Marcel is a french wrapper around the docker CLI, intended as a drop-in
-replacement in the french sovereign operating system.
+replacement of docker, for the future french sovereign operating system.
 """
 
 import re
@@ -17,7 +17,7 @@ TRANSLATIONS = {
     u'pousse': u'push',
     u'tire': u'pull',
     u'bûches': u'logs',
-    u'greve': u'suspend',
+    u'grève': u'suspend',
     u'matuer': u'kill',
     u'perquisitionne': u'inspect',
     u'construis': 'build',
