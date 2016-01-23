@@ -24,7 +24,7 @@ For it to work, you just need to include a ``RecetteÀMarcel`` file in the curre
 
 ## How is marcel related to the french OS ?
 
-This project aims at providing an acceptable technology background on the great OS of France could be based on. Take a look at [the official document](http://www.assemblee-nationale.fr/14/amendements/3318/CION_LOIS/CL129.asp) to see how compliant and willingfull to help we are, already developing the technologies for the OS of tomorrow, just like RedStar OS is. Help us make the World better by destroying non-compliant operating systems, e.g. thoses who includes encryption without backdoors.
+This project aims at providing an acceptable technology background on which the Great OS (not firewall) of France could be based on. Take a look at [the official document](http://www.assemblee-nationale.fr/14/amendements/3318/CION_LOIS/CL129.asp) to see how compliant and willingfull to help we are, already developing the technologies for the OS of tomorrow, just like RedStar OS is. Help us make the World better by destroying non-compliant operating systems, e.g. thoses who includes encryption without backdoors.
 
 ## Thanks
 The [original idea](https://github.com/docker/docker/issues/19396) came of [@ndeloof](https://github.com/ndeloof)'s mind.
