@@ -24,4 +24,4 @@ For it to work, you just need to include a ``RecetteÀMarcel`` file in the curre
 
 ## Thanks
 The [original idea](https://github.com/docker/docker/issues/19396) came of [@ndeloof](https://github.com/ndeloof)'s mind.
-The logo was provided by [Thom-x](https://github.com/Thom-x).
+The logo was provided by [jkneb](https://github.com/jkneb).
