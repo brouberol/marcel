@@ -1,0 +1,10 @@
+# This is an example RecetteÀMarcel file
+DEPUIS debian:latest
+CRÉATEUR Thomas Maurice <thomas@maurice.fr>
+
+LANCE apt-get update && apt-get upgrade -y
+LANCE useradd manuel
+
+UTILISATEUR manuel
+
+ORDRE echo "La baguette hon hon hon"
