@@ -8,6 +8,7 @@ replacement of docker, for the future french sovereign operating system.
 
 import subprocess
 import sys
+import re
 
 from os.path import exists, join, dirname
 
@@ -47,6 +48,39 @@ TRANSLATIONS = {
     u'--etat-d-urgence': '--privileged'
 }
 
+MARCELFILE_TRANSLATIONS = {
+    u'DEPUIS': u'FROM',
+    u'CRÉATEUR': u'MAINTAINER',
+    u'LANCE': u'RUN',
+    u'ORDRE': u'CMD',
+    u'ÉTIQUETTE': u'LABEL',
+    u'DÉSIGNER': u'EXPOSE',
+    u'EELV': u'ENV',
+    u'AJOUTER': u'ADD',
+    u'COPIER': u'COPY',
+    u'POINT D\'ENTRÉE': u'ENTRYPOINT',
+    u'UTILISATEUR': u'USER',
+}
+
+def translated_marcelfile(input_file, output_file):
+    u"""
+    Converts a RecetteÀMarcelle to a Dockerfile
+
+    :param input_file: Input filename
+    :param output_file: Output filename
+    :return: The translated Dockerfile as a string
+    """
+    with open(input_file, 'rb') as f:
+        marcel_file = f.read().decode('utf-8')
+        for key in MARCELFILE_TRANSLATIONS:
+            expression = re.compile(ur'(^|\n)%s' % key, re.UNICODE)
+            marcel_file = expression.sub(ur"\1%s" % MARCELFILE_TRANSLATIONS[key], marcel_file)
+
+        with open(output_file, 'w') as output:
+            output.write(marcel_file.encode('utf-8'))
+
+        return marcel_file
+
 
 def check_for_marcefile(command):
     u"""
@@ -57,7 +91,9 @@ def check_for_marcefile(command):
     if exists(join(dirname(__file__), u'RecetteÀMarcel')):
         # Check if a "-f" argument was not already given
         if '-f' not in command:
-            command = command[:2] + ['-f', u'./RecetteÀMarcel'] + command[2:]
+            # We want to generate a file with the propre Dockerfile format
+            translated_marcelfile(u'RecetteÀMarcel', u'.RecetteÀMarcel.Dockerfile')
+            command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
     return command
 
 
