@@ -82,7 +82,7 @@ def translated_marcelfile(input_file, output_file):
         return marcel_file
 
 
-def check_for_marcefile(command):
+def check_for_marcelfile(command):
     u"""
     Detect if a RecettesÀMarcel file is present in the current directory.
     If so, inject a "-f ./RecettesÀMarcel" argument in the docker build command,
@@ -106,7 +106,7 @@ def main():
     command = [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
     subcommand = command[1]
     if subcommand == 'build':
-        command = check_for_marcefile(command)
+        command = check_for_marcelfile(command)
     subprocess.call(command)
 
 if __name__ == '__main__':
