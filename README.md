@@ -1,6 +1,6 @@
 # Marcel, the french Docker - Marcel, le docker français
 
-![logo](https://raw.githubusercontent.com/brouberol/marcel/master/logo.png)
+![logo](https://brouberol.github.io/marcel/images/logo/marcel-logo.png)
 
 Marcel is a french wrapper around the docker CLI, intended as a drop-in replacement of docker, for the future french sovereign operating system.
 
