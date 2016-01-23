@@ -62,7 +62,7 @@ MARCELFILE_TRANSLATIONS = {
     u'UTILISATEUR': u'USER',
 }
 
-def translate_marcefile(input_file, output_file):
+def translated_marcelfile(input_file, output_file):
     u"""
     Converts a RecetteÀMarcelle to a Dockerfile
 
@@ -92,7 +92,7 @@ def check_for_marcefile(command):
         # Check if a "-f" argument was not already given
         if '-f' not in command:
             # We want to generate a file with the propre Dockerfile format
-            translate_marcefile(u'RecetteÀMarcel', u'.RecetteÀMarcel.Dockerfile')
+            translated_marcelfile(u'RecetteÀMarcel', u'.RecetteÀMarcel.Dockerfile')
             command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
     return command
 
