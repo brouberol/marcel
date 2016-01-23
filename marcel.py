@@ -64,6 +64,9 @@ def check_for_marcefile(command):
 def main():
     command = sys.argv[:]
     command[0] = 'docker'
+    if command[1] == 'et-son-orchestre':
+        command.pop(0)
+        command[0] = 'docker-compose'
     command = [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
     subcommand = command[1]
     if subcommand == 'build':
