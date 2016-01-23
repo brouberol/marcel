@@ -45,15 +45,15 @@ TRANSLATIONS = {
 
 
 def check_for_marcefile(command):
-    """
+    u"""
     Detect if a RecettesÀMarcel file is present in the current directory.
     If so, inject a "-f ./RecettesÀMarcel" argument in the docker build command,
     if such an argument was not already passed.
     """
-    if exists(join(dirname(__file__), 'RecetteÀMarcel')):
+    if exists(join(dirname(__file__), u'RecetteÀMarcel')):
         # Check if a "-f" argument was not already given
         if '-f' not in command:
-            command = command[:2] + ['-f', './RecetteÀMarcel'] + command[2:]
+            command = command[:2] + ['-f', u'./RecetteÀMarcel'] + command[2:]
     return command
 
 
