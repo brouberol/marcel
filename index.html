@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="stylesheets/github-light.css">
 
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
@@ -18,6 +18,10 @@
       })
     </script>
     <title>Marcel by brouberol</title>
+
+    <!-- Fotorama -->
+    <link href="fotorama/fotorama.css" rel="stylesheet">
+    <script src="fotorama/fotorama.js"></script>
   </head>
 
   <body>
@@ -49,7 +53,33 @@
         <h1>
 <a id="marcel-the-french-docker---marcel-le-docker-français" class="anchor" href="#marcel-the-french-docker---marcel-le-docker-fran%C3%A7ais" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Marcel, the french Docker - Marcel, le docker français</h1>
 
-<p><img src="https://raw.githubusercontent.com/brouberol/marcel/master/logo.png" alt="logo"></p>
+<!-- <p><img src="https://raw.githubusercontent.com/brouberol/marcel/master/logo.png" alt="logo"></p> -->
+<div class="fotorama"
+     data-width="100%"
+     data-allowfullscreen="true"
+     data-autoplay="true"
+     data-nav="thumbs">
+
+  <img src="https://raw.githubusercontent.com/brouberol/marcel/master/logo.png" >
+
+  <img src="images/frenchChickenRider.png"  data-caption="ndeloof: French government announced, as part of “digital sovereignty” effort, to consider building a fresh new 100% French operating system - yes, just like North Corea does.">
+
+  <img src="images/marcelLogo.png" data-caption="thaJeztah: I created a branch to work on this; https://github.com/docker/docker/compare/master...thaJeztah:god-save-the-queen">
+
+  <img src="images/translations.png" data-caption="WDYT?">
+
+  <img src="images/iLoveTo.png" data-caption="That's not the first time this idea pops up, BASIC language already supported this curse https://fr.wikipedia.org/wiki/LSE_%28langage_de_programmation%29">
+
+  <img src="images/debardeur.png" data-caption="AlexisNo: It is more common to use the English word 'docker' than 'débardeur' in French. Actually, I even didn't know that this word had this signification! Even wikipedia name it "docker" in it's french version. For me, as a french guy, a 'débardeur' is this:">
+
+  <img src="images/cPasSorcier.jpg" data-caption="brouberol: A common french synonym for 'débardeur' is 'marcel'. For example, I propose to replace docker push par pousse Marcel.">
+
+  <img src="images/cPasSorcier2.jpg" data-caption="brouberol: A common french synonym for 'débardeur' is 'marcel'. For example, I propose to replace docker push par pousse Marcel.">
+
+  <img src="images/dockerLogo.jpg" data-caption="Chauffe Marcel !!!">
+
+  <!-- <img src="images/marcelLogo2.png" > -->
+</div>
 
 <p>Marcel is a french wrapper around the docker CLI, intended as a drop-in replacement of docker, for the future french sovereign operating system.</p>
 
@@ -112,6 +142,6 @@ The logo was provided by <a href="https://github.com/jkneb">jkneb</a>.</p>
 
     </div>
 
-    
+
   </body>
 </html>
