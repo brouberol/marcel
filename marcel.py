@@ -9,6 +9,8 @@ replacement of docker, for the future french sovereign operating system.
 import subprocess
 import sys
 
+from os.path import exists, join, dirname
+
 __version__ = '0.1.0'
 
 TRANSLATIONS = {
@@ -42,10 +44,26 @@ TRANSLATIONS = {
 }
 
 
+def check_for_marcefile(command):
+    """
+    Detect if a RecettesAMarcel file is present in the current directory.
+    If so, inject a "-f ./RecettesAMarcel" argument in the docker build command,
+    if such an argument was not already passed.
+    """
+    if exists(join(dirname(__file__), 'RecetteAMarcel')):
+        # Check if a "-f" argument was not already given
+        if '-f' not in command:
+            command = command[:2] + ['-f', './RecetteAMarcel'] + command[2:]
+    return command
+
+
 def main():
     command = sys.argv[:]
     command[0] = 'docker'
     command = [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
+    subcommand = command[1]
+    if subcommand == 'build':
+        command = check_for_marcefile(command)
     subprocess.call(command)
 
 if __name__ == '__main__':
