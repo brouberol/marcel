@@ -37,6 +37,7 @@ TRANSLATIONS = {
     u'graffiti': u'tag',
     u'rsa': u'rmi',
     u'assigne-à-résidence': u'commit',
+    u'roman-national': u'history',
     # Options
     u'--aide': '--help',
     u'--marque': '--tag',
