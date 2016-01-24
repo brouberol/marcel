@@ -2,7 +2,7 @@
 
 ![logo](https://brouberol.github.io/marcel/images/logo/marcel-logo.png)
 
-Marcel est une enveloppe française qui se base sur l'interface de commande docker et a pour but de remplacer docker, afin de préparer le chemin pour le nouvel Système d'Exploitation souverain Français.
+Marcel est une surcouche française qui se base sur l'interface de commande docker et qui a pour but de remplacer docker, afin de préparer le chemin pour le nouveau Système d'Exploitation souverain Français.
 
 ## Exemples
 
@@ -17,9 +17,9 @@ Marcel est une enveloppe française qui se base sur l'interface de commande dock
 
 ## RecetteÀMarcel
 
-Pour des raisons évidentes, ``Dockerfile`` ne nous semble pas assez souverain, c'est pourquoi marcel utilises ``RecetteÀMarcel`` en lieu et place de ``Dockerfile``.
+Pour des raisons évidentes, ``Dockerfile`` ne nous semble pas assez souverain, c'est pourquoi marcel utilise ``RecetteÀMarcel`` en lieu et place de ``Dockerfile``.
 
-Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarcel`` dans votre dossier courant où vous éxécuterez ensuitee ``marcel construis``. Et voilà, vous pouvez travailler !
+Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarcel`` dans votre dossier courant où vous exécuterez ensuite ``marcel construis``. Et voilà, vous pouvez travailler !
 
 ## En quoi marcel est-il lié au système d'exploitation souverain français ?
 
