@@ -9,8 +9,10 @@ replacement of docker, for the future french sovereign operating system.
 import subprocess
 import sys
 import re
+import os
+import six
 
-from os.path import exists, join, dirname
+from os.path import exists, join
 
 __version__ = '0.1.0'
 
@@ -39,12 +41,13 @@ TRANSLATIONS = {
     u'rsa': u'rmi',
     u'assigne-à-résidence': u'commit',
     u'roman-national': u'history',
+    u'recycle': u'rm',
     # Options
     u'--aide': '--help',
-    u'--marque': '--tag',
+    u'--graffiti': '--tag',
     u'--sortie': '--output',
     u'--auteur': '--author',
-    u'--49-3:': u'--force',
+    u'--49-3': u'--force',
     u'--etat-d-urgence': '--privileged'
 }
 
@@ -62,7 +65,8 @@ MARCELFILE_TRANSLATIONS = {
     u'UTILISATEUR': u'USER',
 }
 
-def translated_marcelfile(input_file, output_file):
+
+def translate_marcelfile(marcelfile):
     u"""
     Converts a RecetteÀMarcelle to a Dockerfile
 
@@ -70,44 +74,63 @@ def translated_marcelfile(input_file, output_file):
     :param output_file: Output filename
     :return: The translated Dockerfile as a string
     """
-    with open(input_file, 'rb') as f:
-        marcel_file = f.read().decode('utf-8')
-        for key in MARCELFILE_TRANSLATIONS:
-            expression = re.compile(ur'(^|\n)%s' % key, re.UNICODE)
-            marcel_file = expression.sub(ur"\1%s" % MARCELFILE_TRANSLATIONS[key], marcel_file)
 
-        with open(output_file, 'w') as output:
-            output.write(marcel_file.encode('utf-8'))
-
-        return marcel_file
+    for key in MARCELFILE_TRANSLATIONS:
+        expression = re.compile(r'(^|\n)%s' % key, re.UNICODE)
+        marcelfile = expression.sub(r"\1%s" % MARCELFILE_TRANSLATIONS[key], marcelfile)
+    return marcelfile
 
 
-def check_for_marcelfile(command):
+def use_marcelfile(command):
     u"""
     Detect if a RecettesÀMarcel file is present in the current directory.
     If so, inject a "-f ./RecettesÀMarcel" argument in the docker build command,
     if such an argument was not already passed.
     """
-    if exists(join(dirname(__file__), u'RecetteÀMarcel')):
+    curdir = os.getcwd()
+    marcelfile_path = join(curdir, u'RecetteÀMarcel')
+    dockerfile_path = join(curdir, u'.RecetteÀMarcel.Dockerfile')
+    if exists(marcelfile_path):
         # Check if a "-f" argument was not already given
         if '-f' not in command:
-            # We want to generate a file with the propre Dockerfile format
-            translated_marcelfile(u'RecetteÀMarcel', u'.RecetteÀMarcel.Dockerfile')
+            # We want to generate a file with the proper Dockerfile format
+            with open(marcelfile_path) as marcelfile,  open(dockerfile_path, 'w') as dockefile:
+                marcelfile_content = marcelfile.read()
+                if six.PY2:
+                    marcelfile_content = marcelfile_content.decode('utf-8')
+                translated_marcelfile = translate_marcelfile(marcelfile_content)
+                if six.PY2:
+                    translated_marcelfile = translated_marcelfile.encode('utf-8')
+                dockefile.write(translated_marcelfile)
             command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
     return command
 
 
-def main():
-    command = sys.argv[:]
-    command[0] = 'docker'
+def replace_command(command):
     if command[1] == 'et-son-orchestre':
         command.pop(0)
         command[0] = 'docker-compose'
-    command = [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
+    else:
+        command[0] = 'docker'
+    return command
+
+
+def translate_command(command):
+    command = replace_command(command)
+    return [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
+
+
+def build_command(command):
+    command = translate_command(command)
     subcommand = command[1]
     if subcommand == 'build':
-        command = check_for_marcelfile(command)
-    subprocess.call(command)
+        command = use_marcelfile(command)
+    return command
+
+
+def main():
+    subprocess.call(build_command(sys.argv))
+
 
 if __name__ == '__main__':
     main()
