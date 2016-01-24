@@ -35,4 +35,4 @@ Ce projet vise à fournir un socle technologique acceptable pour le Grand SE de 
 
 ## Remerciements
 L'[idée originelle](https://github.com/docker/docker/issues/19396) revient à [@ndeloof](https://github.com/ndeloof).
-Le logo a été designé (/!\ Anglicisme) par [jkneb](https://github.com/jkneb).
+Le logo a été conçu par [jkneb](https://github.com/jkneb).
