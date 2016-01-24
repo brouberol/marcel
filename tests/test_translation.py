@@ -39,6 +39,7 @@ from marcel import (
     (['marcel', 'roman-national'], ['docker', 'history']),
     (['marcel', 'recycle'], ['docker', 'rm']),
     (['marcel', '--aide'], ['docker', '--help']),
+    (['marcel', 'sauvegarde', '--sortie'], ['docker', 'save', '--output']),
     (['marcel', 'construis', '--graffiti'], ['docker', 'build', '--tag']),
     (['marcel', 'recycle', '--49-3'], ['docker', 'rm', '--force']),
 ])
