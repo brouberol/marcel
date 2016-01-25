@@ -66,7 +66,13 @@ CRÉATEUR Thomas Maurice <thomas@maurice.fr>
 LANCE apt-get update && apt-get upgrade -y
 LANCE useradd manuel
 
+BTP echo "Coucou"
+
 UTILISATEUR manuel
+
+APÉRITIF SIGSTOP
+
+LIEU DE TRAVAIL /app
 
 ORDRE echo "La baguette hon hon hon"
 """
@@ -77,7 +83,13 @@ MAINTAINER Thomas Maurice <thomas@maurice.fr>
 RUN apt-get update && apt-get upgrade -y
 RUN useradd manuel
 
+ONBUILD echo "Coucou"
+
 USER manuel
+
+STOPSIGNAL SIGSTOP
+
+WORKDIR /app
 
 CMD echo "La baguette hon hon hon"
 """
