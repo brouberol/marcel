@@ -42,6 +42,11 @@ from marcel import (
     (['marcel', 'sauvegarde', '--sortie'], ['docker', 'save', '--output']),
     (['marcel', 'construis', '--graffiti'], ['docker', 'build', '--tag']),
     (['marcel', 'recycle', '--49-3'], ['docker', 'rm', '--force']),
+    (['marcel', 'cherche'], ['docker', 'search']),
+    (['marcel', u'réseau'], ['docker', 'network']),
+    (['marcel', 'amsterdam'], ['docker', 'port']),
+    (['marcel', 'renomme'], ['docker', 'rename']),
+    (['marcel', 'auboulot'], ['docker', 'unpause']),
 ])
 def test_translate_command(command, expected):
     """Check the marcel --> docker command translation."""
