@@ -63,12 +63,15 @@ MARCELFILE_TRANSLATIONS = {
     u'COPIER': u'COPY',
     u'POINT D\'ENTRÉE': u'ENTRYPOINT',
     u'UTILISATEUR': u'USER',
+    u'LIEU DE TRAVAIL': u'WORKDIR',
+    u'BTP', u'ONBUILD',
+    u'APÉRITIF', u'STOPSIGNAL',
 }
 
 
 def translate_marcelfile(marcelfile):
     u"""
-    Converts a RecetteÀMarcelle to a Dockerfile
+    Converts a RecetteÀMarcel to a Dockerfile
 
     :param input_file: Input filename
     :param output_file: Output filename
