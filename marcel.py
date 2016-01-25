@@ -42,6 +42,11 @@ TRANSLATIONS = {
     u'assigne-à-résidence': u'commit',
     u'roman-national': u'history',
     u'recycle': u'rm',
+    u'cherche': u'search',
+    u'réseau': u'network',
+    u'amsterdam': u'port',
+    u'renomme': u'rename',
+    u'auboulot': u'unpause',
     # Options
     u'--aide': '--help',
     u'--graffiti': '--tag',
