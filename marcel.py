@@ -64,8 +64,8 @@ MARCELFILE_TRANSLATIONS = {
     u'POINT D\'ENTRÉE': u'ENTRYPOINT',
     u'UTILISATEUR': u'USER',
     u'LIEU DE TRAVAIL': u'WORKDIR',
-    u'BTP', u'ONBUILD',
-    u'APÉRITIF', u'STOPSIGNAL',
+    u'BTP': u'ONBUILD',
+    u'APÉRITIF': u'STOPSIGNAL',
 }
 
 
