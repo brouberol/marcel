@@ -4,6 +4,8 @@ python:
   - "3.4"
   - "3.5"
 # command to install dependencies
-install: "pip install -r requirements/test.txt"
+install: "pip install -r requirements/test.txt coveralls"
 # command to run tests
-script: py.test
+script: py.test --cov marcel.py --cov-report term-missing
+after_success:
+  - coveralls
