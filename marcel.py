@@ -75,7 +75,7 @@ MARCELFILE_TRANSLATIONS = {
 
 
 def translate_marcelfile(marcelfile):
-    u"""
+    """
     Converts a RecetteÀMarcel to a Dockerfile
 
     :param input_file: Input filename
@@ -90,7 +90,7 @@ def translate_marcelfile(marcelfile):
 
 
 def use_marcelfile(command):
-    u"""
+    """
     Detect if a RecettesÀMarcel file is present in the current directory.
     If so, inject a "-f ./RecettesÀMarcel" argument in the docker build command,
     if such an argument was not already passed.
@@ -98,23 +98,24 @@ def use_marcelfile(command):
     curdir = os.getcwd()
     marcelfile_path = join(curdir, u'RecetteÀMarcel')
     dockerfile_path = join(curdir, u'.RecetteÀMarcel.Dockerfile')
-    if exists(marcelfile_path):
-        # Check if a "-f" argument was not already given
-        if '-f' not in command:
-            # We want to generate a file with the proper Dockerfile format
-            with open(marcelfile_path) as marcelfile,  open(dockerfile_path, 'w') as dockefile:
-                marcelfile_content = marcelfile.read()
-                if six.PY2:
-                    marcelfile_content = marcelfile_content.decode('utf-8')
-                translated_marcelfile = translate_marcelfile(marcelfile_content)
-                if six.PY2:
-                    translated_marcelfile = translated_marcelfile.encode('utf-8')
-                dockefile.write(translated_marcelfile)
-            command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
+    if not exists(marcelfile_path) or '-f' in command:
+        return command
+
+    # We want to generate a file with the proper Dockerfile format
+    with open(marcelfile_path) as marcelfile,  open(dockerfile_path, 'w') as dockefile:
+        marcelfile_content = marcelfile.read()
+        if six.PY2:
+            marcelfile_content = marcelfile_content.decode('utf-8')
+        translated_marcelfile = translate_marcelfile(marcelfile_content)
+        if six.PY2:
+            translated_marcelfile = translated_marcelfile.encode('utf-8')
+        dockefile.write(translated_marcelfile)
+    command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
     return command
 
 
 def replace_command(command):
+    """Replace the executable itself for given values of the first command."""
     if command[1] == 'et-son-orchestre':
         command.pop(0)
         command[0] = 'docker-compose'
@@ -124,11 +125,13 @@ def replace_command(command):
 
 
 def translate_command(command):
+    """Translate the french parts of the command to docker syntax."""
     command = replace_command(command)
     return [TRANSLATIONS.get(chunk, chunk) for chunk in command if chunk]
 
 
 def build_command(command):
+    """Translate the command from marcel syntax to docker."""
     command = translate_command(command)
     subcommand = command[1]
     if subcommand == 'build':
@@ -137,6 +140,7 @@ def build_command(command):
 
 
 def main():
+    """Run docker commands from marcel syntax."""
     subprocess.call(build_command(sys.argv))
 
 
