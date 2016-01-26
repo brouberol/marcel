@@ -101,7 +101,7 @@ CMD echo "La baguette hon hon hon"
     assert translate_marcelfile(marcelfile_content) == expected
 
 
-def test_check_for_marcelfile(tmpdir):
+def test_use_marcelfile(tmpdir):
     marcelfile_content = u"""
 DEPUIS debian:latest
 CRÉATEUR Thomas Maurice <thomas@maurice.fr>
@@ -121,3 +121,8 @@ ORDRE echo "La baguette hon hon hon"
     command = ['marcel', 'construis']
     command = use_marcelfile(command)
     assert command == ['marcel', 'construis', '-f', u'./.RecetteÀMarcel.Dockerfile']
+
+
+def test_use_marcelfile_with_provided_marcefile():
+    command = ['marcel', 'construis', '-f', 'Dockerfile']
+    assert use_marcelfile(command) == command

@@ -104,10 +104,10 @@ def use_marcelfile(command):
     # We want to generate a file with the proper Dockerfile format
     with open(marcelfile_path) as marcelfile,  open(dockerfile_path, 'w') as dockefile:
         marcelfile_content = marcelfile.read()
-        if six.PY2:
+        if six.PY2:  # pragma: no cover
             marcelfile_content = marcelfile_content.decode('utf-8')
         translated_marcelfile = translate_marcelfile(marcelfile_content)
-        if six.PY2:
+        if six.PY2:  # pragma: no cover
             translated_marcelfile = translated_marcelfile.encode('utf-8')
         dockefile.write(translated_marcelfile)
     command = command[:2] + ['-f', u'./.RecetteÀMarcel.Dockerfile'] + command[2:]
@@ -139,7 +139,7 @@ def build_command(command):
     return command
 
 
-def main():
+def main():  # pragma: no cover
     """Run docker commands from marcel syntax."""
     subprocess.call(build_command(sys.argv))
 
