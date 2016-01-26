@@ -11,6 +11,7 @@ from marcel import (
     replace_command,
     translate_marcelfile,
     use_marcelfile,
+    build_command,
 )
 
 
@@ -126,3 +127,8 @@ ORDRE echo "La baguette hon hon hon"
 def test_use_marcelfile_with_provided_marcefile():
     command = ['marcel', 'construis', '-f', 'Dockerfile']
     assert use_marcelfile(command) == command
+
+
+def test_build_command(tmpdir):
+    os.chdir(str(tmpdir))
+    assert build_command(['marcel', 'construis']) == ['docker', 'build']
