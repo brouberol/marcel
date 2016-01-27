@@ -144,5 +144,5 @@ def main():  # pragma: no cover
     subprocess.call(build_command(sys.argv))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':   # pragma: no cover
     main()
