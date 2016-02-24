@@ -44,7 +44,7 @@ TRANSLATIONS = {
     u'recycle': u'rm',
     u'cherche': u'search',
     u'réseau': u'network',
-    u'amsterdam': u'port',
+    u'marseille': u'port',
     u'renomme': u'rename',
     u'auboulot': u'unpause',
     # Options
