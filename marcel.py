@@ -47,6 +47,7 @@ TRANSLATIONS = {
     u'amsterdam': u'port',
     u'renomme': u'rename',
     u'auboulot': u'unpause',
+    u'barrage': u'wait',
     # Options
     u'--aide': '--help',
     u'--graffiti': '--tag',
