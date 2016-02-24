@@ -45,7 +45,7 @@ from marcel import (
     (['marcel', 'recycle', '--49-3'], ['docker', 'rm', '--force']),
     (['marcel', 'cherche'], ['docker', 'search']),
     (['marcel', u'réseau'], ['docker', 'network']),
-    (['marcel', 'amsterdam'], ['docker', 'port']),
+    (['marcel', 'marseille'], ['docker', 'port']),
     (['marcel', 'renomme'], ['docker', 'rename']),
     (['marcel', 'auboulot'], ['docker', 'unpause']),
 ])
