@@ -117,7 +117,7 @@ def use_marcelfile(command):
 
 def replace_command(command):
     """Replace the executable itself for given values of the first command."""
-    if command[1] == 'et-son-orchestre':
+    if len(command) > 1 and command[1] == 'et-son-orchestre':
         command.pop(0)
         command[0] = 'docker-compose'
     else:
@@ -134,9 +134,10 @@ def translate_command(command):
 def build_command(command):
     """Translate the command from marcel syntax to docker."""
     command = translate_command(command)
-    subcommand = command[1]
-    if subcommand == 'build':
-        command = use_marcelfile(command)
+    if len(command) > 1:
+        subcommand = command[1]
+        if subcommand == 'build':
+            command = use_marcelfile(command)
     return command
 
 
