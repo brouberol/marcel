@@ -1,5 +1,5 @@
 # Marcel, the french Docker - Marcel, le docker français
-![build status](https://travis-ci.org/brouberol/marcel.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/brouberol/marcel/badge.svg)](https://coveralls.io/github/brouberol/marcel?branch=master)
+[![Build Status](https://travis-ci.org/brouberol/marcel.svg?branch=master)](https://travis-ci.org/brouberol/marcel) [![Coverage Status](https://coveralls.io/repos/github/brouberol/marcel/badge.svg)](https://coveralls.io/github/brouberol/marcel?branch=master)
 
 ![logo](https://brouberol.github.io/marcel/images/logo/marcel-logo.png)
 
