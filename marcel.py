@@ -54,7 +54,8 @@ TRANSLATIONS = {
     u'--sortie': '--output',
     u'--auteur': '--author',
     u'--49-3': u'--force',
-    u'--etat-d-urgence': '--privileged'
+    u'--etat-d-urgence': '--privileged',
+    u'--disque-numerique-polyvalent': '--dvd'
 }
 
 MARCELFILE_TRANSLATIONS = {
