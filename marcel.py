@@ -48,6 +48,7 @@ TRANSLATIONS = {
     u'renomme': u'rename',
     u'auboulot': u'unpause',
     u'barrage': u'wait',
+    u'socialistes': u'ps',
     # Options
     u'--aide': u'--help',
     u'--graffiti': u'--tag',
