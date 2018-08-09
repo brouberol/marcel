@@ -23,7 +23,7 @@ Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarce
 
 ## Comment contribuer ?
 
-Pour commencer, merci de contribuer à la splendeur de la "french tech". Vous aurez besoin pour cela d'installer les dépendances dans votre environnement virtuel:
+Pour commencer, merci de contribuer à la splendeur de la « french tech ». Vous aurez besoin pour cela d'installer les dépendances dans votre environnement virtuel:
 
 ```$ pip install -r requirements/dev.txt```
 
