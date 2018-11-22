@@ -1,6 +1,6 @@
 # Marcel, docker à la française
 
-![logo](https://brouberol.github.io/marcel/images/logo/marcel-logo.png)
+![logo](https://brouberol.github.io/marcel/images/logo/marcel-logo-yellow.png)
 
 Marcel est une surcouche française qui se base sur l'interface de commande docker et qui a pour but de remplacer docker, afin de préparer le chemin pour le nouveau Système d'Exploitation souverain Français.
 
