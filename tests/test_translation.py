@@ -17,7 +17,7 @@ from marcel import (
 
 @pytest.mark.parametrize('command, expected', [
     (['marcel', 'chauffe'], ['docker', 'run']),
-    (['marcel', 'fais'], ['docker', 'exec']),
+    (['marcel', 'guillotine'], ['docker', 'exec']),
     (['marcel', 'pousse'], ['docker', 'push']),
     (['marcel', 'apporte'], ['docker', 'pull']),
     (['marcel', u'bûches'], ['docker', 'logs']),

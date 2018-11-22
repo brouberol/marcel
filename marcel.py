@@ -19,7 +19,7 @@ __version__ = '0.1.0'
 TRANSLATIONS = {
     # Commands
     u'chauffe': u'run',
-    u'fais': u'exec',
+    u'guillotine': u'exec',
     u'pousse': u'push',
     u'apporte': u'pull',
     u'bûches': u'logs',
