@@ -24,7 +24,7 @@ from marcel import (
     (['marcel', u'grève'], ['docker', 'suspend']),
     (['marcel', 'matuer'], ['docker', 'kill']),
     (['marcel', 'perquisitionne'], ['docker', 'inspect']),
-    (['marcel', 'construis'], ['docker', 'build']),
+    (['marcel', 'bricole'], ['docker', 'build']),
     (['marcel', 'charge'], ['docker', 'load']),
     (['marcel', 'plagie'], ['docker', 'copy']),
     (['marcel', 'france24'], ['docker', 'info']),
@@ -41,7 +41,7 @@ from marcel import (
     (['marcel', 'recycle'], ['docker', 'rm']),
     (['marcel', '--aide'], ['docker', '--help']),
     (['marcel', 'sauvegarde', '--sortie'], ['docker', 'save', '--output']),
-    (['marcel', 'construis', '--graffiti'], ['docker', 'build', '--tag']),
+    (['marcel', 'bricole', '--graffiti'], ['docker', 'build', '--tag']),
     (['marcel', 'recycle', '--49-3'], ['docker', 'rm', '--force']),
     (['marcel', 'cherche'], ['docker', 'search']),
     (['marcel', u'réseau'], ['docker', 'network']),
@@ -119,16 +119,16 @@ ORDRE echo "La baguette hon hon hon"
         if six.PY2:
             marcelfile_content = marcelfile_content.encode('utf-8')
         marcelfile.write(marcelfile_content)
-    command = ['marcel', 'construis']
+    command = ['marcel', 'bricole']
     command = use_marcelfile(command)
-    assert command == ['marcel', 'construis', '-f', u'./.RecetteÀMarcel.Dockerfile']
+    assert command == ['marcel', 'bricole', '-f', u'./.RecetteÀMarcel.Dockerfile']
 
 
 def test_use_marcelfile_with_provided_marcefile():
-    command = ['marcel', 'construis', '-f', 'Dockerfile']
+    command = ['marcel', 'bricole', '-f', 'Dockerfile']
     assert use_marcelfile(command) == command
 
 
 def test_build_command(tmpdir):
     os.chdir(str(tmpdir))
-    assert build_command(['marcel', 'construis']) == ['docker', 'build']
+    assert build_command(['marcel', 'bricole']) == ['docker', 'build']
