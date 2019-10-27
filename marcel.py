@@ -26,7 +26,7 @@ TRANSLATIONS = {
     u'grève': u'suspend',
     u'matuer': u'kill',
     u'perquisitionne': u'inspect',
-    u'construis': u'build',
+    u'bricole': u'build',
     u'charge': u'load',
     u'plagie': u'copy',
     u'france24': u'info',
