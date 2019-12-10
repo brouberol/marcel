@@ -19,7 +19,7 @@ Marcel est une surcouche française qui se base sur l'interface de commande dock
 
 Pour des raisons évidentes, ``Dockerfile`` ne nous semble pas assez souverain, c'est pourquoi marcel utilise ``RecetteÀMarcel`` en lieu et place de ``Dockerfile``.
 
-Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarcel`` dans votre dossier courant où vous exécuterez ensuite ``marcel construis``. Et voilà, vous pouvez travailler !
+Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarcel`` dans votre dossier courant où vous exécuterez ensuite ``marcel bricole``. Et voilà, vous pouvez travailler !
 
 ## Comment contribuer ?
 
