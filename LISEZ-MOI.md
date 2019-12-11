@@ -31,7 +31,7 @@ Puis, créez une branche à partir de la branche maître et publiez vos fonction
 
 ## En quoi marcel est-il lié au système d'exploitation souverain français ?
 
-Ce projet vise à fournir un socle technologique acceptable pour le Grand SE de France. Vous pouvez jeter un coup d'œil au [document officiel](http://www.assemblee-nationale.fr/14/amendements/3318/CION_LOIS/CL129.asp) pour constater à quel point nous sommes enthousiastes et engagés dans le développement des technologies néccessaires au SE de demain, à l'instar de RedStar OS. Aidez-nous à rendre le monde meilleur en annihilant les SE non autorisés, comme ceux qui ont le culot d'intégrer des technologies de chiffrement sans fournir au préalable la clé à la DST ou aux services secrets français, si volontaires pour défendre les intérêts et les droits de nos concitoyens.
+Ce projet vise à fournir un socle technologique acceptable pour le Grand SE de France. Vous pouvez jeter un coup d'œil au [document officiel](http://www.assemblee-nationale.fr/14/amendements/3318/CION_LOIS/CL129.asp) pour constater à quel point nous sommes enthousiastes et engagés dans le développement des technologies nécessaires au SE de demain, à l'instar de RedStar OS. Aidez-nous à rendre le monde meilleur en annihilant les SE non autorisés, comme ceux qui ont le culot d'intégrer des technologies de chiffrement sans fournir au préalable la clé à la DST ou aux services secrets français, si volontaires pour défendre les intérêts et les droits de nos concitoyens.
 
 ## Remerciements
 L'[idée originelle](https://github.com/docker/docker/issues/19396) revient à [@ndeloof](https://github.com/ndeloof).
