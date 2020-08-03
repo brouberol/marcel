@@ -77,6 +77,23 @@ MARCELFILE_TRANSLATIONS = {
 }
 
 
+def output_completion(shell):
+    if shell == 'bash':
+        print("""
+function _marcel_complete {
+    res=(${COMP_LINE:0:$COMP_POINT})
+    res=${res[-1]}
+    ary=(""" + ' '.join(TRANSLATIONS) + """)
+    for cmd in ${ary[*]}
+    do if [[ $cmd == $res* && $cmd != $res ]]; then COMPREPLY="$cmd $COMPREPLY"; fi
+    done
+    COMPREPLY=($(echo -e "${COMPREPLY}" | sed -e 's/[[:space:]]*$//'))
+}
+
+complete -F _marcel_complete marcel
+""")
+
+
 def translate_marcelfile(marcelfile):
     """
     Converts a RecetteÀMarcel to a Dockerfile
@@ -144,6 +161,9 @@ def build_command(command):
 
 
 def main():  # pragma: no cover
+    if len(sys.argv) > 2 and sys.argv[1] == "complète":
+        output_completion(sys.argv[2])
+        return
     """Run docker commands from marcel syntax."""
     subprocess.call(build_command(sys.argv))
 
