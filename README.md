@@ -21,7 +21,14 @@ Marcel is a french wrapper around the docker CLI, intended as a drop-in replacem
 Obviously, the ``Dockerfile`` name is not sovereign enough for us. That's why instead of ``Dockerfile``s, marcel uses ``RecetteÀMarcel`` files.
 For now, they use the exact same syntax as ``Dockerfile``, but we'll see about that.
 
-For it to work, you just need to include a ``RecetteÀMarcel`` file in the current directory where you execute your ``marcel construis`` command, are you're good to go.
+For it to work, you just need to include a ``RecetteÀMarcel`` file in the current directory where you execute your ``marcel bricole`` command, are you're good to go.
+
+## Bash completion
+
+Add this line to your ``~/.bashrc``:
+```bash
+source <(marcel complète bash)
+```
 
 ## Contributing.
 

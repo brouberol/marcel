@@ -21,6 +21,12 @@ Pour des raisons évidentes, ``Dockerfile`` ne nous semble pas assez souverain, 
 
 Pour que cela fonctionne, il vous suffit d'intégrer le fichier ``RecetteÀMarcel`` dans votre dossier courant où vous exécuterez ensuite ``marcel bricole``. Et voilà, vous pouvez travailler !
 
+## Auto-complétion avec bash
+Ajoutez dans votre ``~/.bashrc`` :
+```bash
+source <(marcel complète bash)
+```
+
 ## Comment contribuer ?
 
 Pour commencer, merci de contribuer à la splendeur de la « french tech ». Vous aurez besoin pour cela d'installer les dépendances dans votre environnement virtuel:
