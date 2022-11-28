@@ -49,6 +49,9 @@ TRANSLATIONS = {
     u'auboulot': u'unpause',
     u'barrage': u'wait',
     u'socialistes': u'ps',
+    u'empile': u'stack',
+    u'essaim': u'swarm',
+    u'compose':u'et-son-orchestre',
     # Options
     u'--aide': u'--help',
     u'--graffiti': u'--tag',
@@ -56,7 +59,8 @@ TRANSLATIONS = {
     u'--auteur': u'--author',
     u'--49-3': u'--force',
     u'--etat-d-urgence': u'--privileged',
-    u'--disque-numerique-polyvalent': u'--dvd'
+    u'--disque-numerique-polyvalent': u'--dvd',
+    u'--decroche': u'--detach'
 }
 
 MARCELFILE_TRANSLATIONS = {
