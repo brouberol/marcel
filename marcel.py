@@ -50,7 +50,7 @@ TRANSLATIONS = {
     u'barrage': u'wait',
     u'socialistes': u'ps',
     u'empile': u'stack',
-    u'essaim': u'swarm',
+    u'bzzzz': u'swarm',
     u'compose':u'et-son-orchestre',
     # Options
     u'--aide': u'--help',
