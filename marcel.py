@@ -6,13 +6,13 @@ Marcel is a french wrapper around the docker CLI, intended as a drop-in
 replacement of docker, for the future french sovereign operating system.
 """
 
+import os
+import re
 import subprocess
 import sys
-import re
-import os
-import six
-
 from os.path import exists, join
+
+import six
 
 __version__ = '0.1.0'
 
@@ -49,6 +49,9 @@ TRANSLATIONS = {
     u'auboulot': u'unpause',
     u'barrage': u'wait',
     u'socialistes': u'ps',
+    u'empile': u'stack',
+    u'bzzzz': u'swarm',
+    u'et-son-orchestre':u'compose',
     # Options
     u'--aide': u'--help',
     u'--graffiti': u'--tag',
@@ -56,7 +59,8 @@ TRANSLATIONS = {
     u'--auteur': u'--author',
     u'--49-3': u'--force',
     u'--etat-d-urgence': u'--privileged',
-    u'--disque-numerique-polyvalent': u'--dvd'
+    u'--disque-numerique-polyvalent': u'--dvd',
+    u'--decroche': u'--detach'
 }
 
 MARCELFILE_TRANSLATIONS = {
