@@ -47,6 +47,7 @@ TRANSLATIONS = {
     u'marseille': u'port',
     u'renomme': u'rename',
     u'auboulot': u'unpause',
+    u'fascicule': u'volume',
     u'barrage': u'wait',
     u'socialistes': u'ps',
     # Options
